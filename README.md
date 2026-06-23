@@ -114,7 +114,7 @@ ai-platform/
 
 ## 🎥 演示视频
 
-5分钟录屏解说视频请见: [B站链接](https://www.bilibili.com/video/BV1Q2iXBtEme?vd_source=8ae9d521b063cacc89e59cbdfe8f518e)
+5分钟录屏解说视频请见: [B站链接](https://www.bilibili.com/video/BV1ztZJYBE3k?vd_source=8ae9d521b063cacc89e59cbdfe8f518e)
 
 ### 视频解说要点
 
