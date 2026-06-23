@@ -1,0 +1,67 @@
+【示例知识库】AI 与 LLM 基础知识
+
+一、什么是大语言模型 (LLM)
+
+大语言模型 (Large Language Model, LLM) 是一种基于 Transformer 架构的深度学习模型，
+通过在海量文本数据上进行预训练，学习语言的统计规律和知识表示。
+
+代表性模型包括:
+- GPT 系列 (OpenAI): GPT-3.5, GPT-4, GPT-4o
+- Claude 系列 (Anthropic): Claude 3.5 Sonnet, Claude 4 Opus
+- Llama 系列 (Meta): Llama 3, Llama 4
+- 通义千问 (阿里): Qwen 2.5, Qwen 3
+- DeepSeek 系列: DeepSeek V3, DeepSeek R1
+
+二、RAG (检索增强生成)
+
+RAG (Retrieval-Augmented Generation) 是一种结合信息检索与文本生成的技术架构。
+其核心思想是: 在生成回答之前，先从外部知识库中检索相关信息，
+然后将检索结果作为上下文提供给 LLM，从而生成更准确、更具时效性的回答。
+
+RAG 的工作流程:
+1. 文档加载: 读取 PDF、TXT、网页等文档
+2. 文本分块: 将长文档切分为合适大小的块 (Chunk)
+3. 向量化: 使用 Embedding 模型将文本块转换为向量
+4. 存储: 将向量存入向量数据库 (如 ChromaDB、FAISS、Pinecone)
+5. 检索: 用户提问时，将问题向量化，搜索最相似的 Top-K 个文档块
+6. 生成: 将检索到的文档块与用户问题一起作为 Prompt 输入 LLM
+
+三、Multi-Agent 协作系统
+
+Multi-Agent 系统由多个 AI Agent 组成，每个 Agent 扮演不同角色，
+从各自的专业视角分析问题，最后综合各方观点得出更全面的结论。
+
+优势:
+- 多角度分析，避免单一视角偏差
+- 批判性思维，通过角色冲突发现漏洞
+- 协同创新，融合不同领域的知识和方法
+
+典型 Agent 角色:
+- 技术专家: 关注技术可行性和实现方案
+- 产品经理: 关注用户需求和商业价值
+- 创意设计师: 关注用户体验和创新突破
+- 批判性思维者: 关注风险和不足之处
+
+四、Ollama 本地部署
+
+Ollama 是一个开源的本地 LLM 运行工具，支持 Windows、macOS、Linux。
+只需一条命令即可拉取并运行模型:
+  ollama pull qwen2.5:7b
+  ollama run qwen2.5:7b
+
+优势:
+- 完全免费，无需API费用
+- 数据本地处理，保护隐私
+- 离线可用，不受网络限制
+
+五、Streamlit 快速构建 AI 应用
+
+Streamlit 是 Python 生态中最流行的 AI 应用前端框架，
+可以用纯 Python 代码快速构建交互式 Web 界面。
+
+核心组件:
+- st.chat_input: 对话输入框
+- st.chat_message: 消息气泡
+- st.sidebar: 侧边栏参数面板
+- st.tabs: 多标签页布局
+- st.file_uploader: 文件上传
